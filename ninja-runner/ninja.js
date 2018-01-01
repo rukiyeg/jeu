@@ -12,7 +12,6 @@
     var canUseLocalStorage = window.localStorage !== null;
     ctx.font = "15pt Arial";
 
-    //localStorage????
 
     //variables des platforms
     var platformHeight, platformLength, gapLength;
