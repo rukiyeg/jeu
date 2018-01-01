@@ -10,6 +10,10 @@ canvas {
     border: 1px solid black;
     box-sizing: border-box;
     z-index: 1;
+    top: 0;
+    left: 0;
+    width: 1000px;
+    height: 760px;
 }
 
 a {
@@ -18,23 +22,25 @@ a {
 }
 
 .conteneur {
-    width: 1200px;
-    height: 880px;
+    width: 1000px;
+    height: 760px;
     box-sizing: border-box;
     position: absolute;
-    margin-left: auto;
-    margin-right: auto;
+    top: 5px;
+    left: 5px;
 }
 
 #menu {
     position: absolute;
-    width: 1200px;
-    height: 880px;
+    width: 800px;
+    height: 480px;
     box-sizing: border-box;
     border: 1px solid black;
     z-index: 2;
     text-align: center;
     background-color: grey;
+    width: 1000px;
+    height: 760px;
 }
 
 
@@ -43,9 +49,12 @@ a {
     width: 50%;
     height: 50%;
     overflow: auto;
+    margin: auto;
     position: absolute;
-    left: 25%;
-    top: 20%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
 }
 
 #percent {
@@ -104,4 +113,15 @@ a {
 
 #main h1 {
     color: white;
+}
+
+.play {
+    display: block;
+    width: 150px;
+    margin: 0 auto;
+    height: 30px;
+    line-height: 30px;
+    border: 1px solid #AA2666;
+    border-radius: 5px;
+    box-sizing: border-box;
 }
