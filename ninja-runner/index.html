@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ninja Runner</title>
+    <link rel="stylesheet" href="ninja.css" type="text/css" media="screen">
+    <script type="text/javascript" src="jquery.1.10.2.min.js"></script>
+</head>
+
+<body>
+    <div class="conteneur">
+        <div class="sound sound-off"></div>
+        <div id="menu">
+            <div id="progress">
+                <div id="percent">Chargement : <span id="prog"></span></div>
+                <progress id="progress-bar" value='0'></progress>
+            </div>
+            <div id="main">
+                <h1>Ninja Runner</h1>
+                <a href="#" class="play">Lancer la partie</a>
+            </div>
+        </div>
+        <canvas id="canvas" width="1200" height="880"></canvas>
+        <div id="game-over">
+            <h2> Vous avez couru <span id="score"></span>mètres</h2>
+            <a href="#" class="restart">Essayez encore</a>
+        </div>
+    </div>
+    <script type="text/javascript" src="ninja.js"></script>
+</body>
+
+</html>

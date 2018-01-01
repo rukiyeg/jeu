@@ -1,0 +1,107 @@
+body {
+    font-family: arial, sans-serif;
+    font-size: 24px;
+}
+
+canvas {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid black;
+    box-sizing: border-box;
+    z-index: 1;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.conteneur {
+    width: 1200px;
+    height: 880px;
+    box-sizing: border-box;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#menu {
+    position: absolute;
+    width: 1200px;
+    height: 880px;
+    box-sizing: border-box;
+    border: 1px solid black;
+    z-index: 2;
+    text-align: center;
+    background-color: grey;
+}
+
+
+
+#progress {
+    width: 50%;
+    height: 50%;
+    overflow: auto;
+    position: absolute;
+    left: 25%;
+    top: 20%;
+}
+
+#percent {
+    position: absolute;
+    left: 34%;
+    top: 39%;
+    margin-left: -20px;
+    z-index: 4;
+    color: white;
+    font-weight: 900;
+}
+
+#progress-bar {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -100px;
+    width: 200px;
+    z-index: 3;
+}
+
+.sound {
+    display: none;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.sound-on {
+    background-image: url('imgs/soundOn.png');
+    background-repeat: no-repeat;
+}
+
+.sound-off {
+    background-image: url('imgs/soundOff.png');
+    background-repeat: no-repeat;
+}
+
+#main {
+    display: none;
+    width: 50%;
+    height: 60%;
+    overflow: auto;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-image: url('imgs/menu-bg.png');
+}
+
+#main h1 {
+    color: white;
+}
