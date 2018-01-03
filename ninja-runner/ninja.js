@@ -10,7 +10,6 @@
         environment = [];
 
     var canUseLocalStorage = window.localStorage !== null;
-    ctx.font = "15pt Arial";
 
 
     //variables des platforms
@@ -169,17 +168,17 @@
         this.backdrop2.speed = 0.6;
 
         /**
-         * Draw the backgrounds to the screen at different speeds
+         * Apparition des backgrounds à différentes vitesses
          */
         this.draw = function () {
             ctx.drawImage(assetLoader.imgs.bg, 0, 0);
 
-            // Pan background
+            // Dérouler le background
             this.sky.x -= this.sky.speed;
             this.backdrop.x -= this.backdrop.speed;
             this.backdrop2.x -= this.backdrop2.speed;
 
-            // draw images side by side to loop
+            // apparition des images en boucle
             ctx.drawImage(assetLoader.imgs.sky, this.sky.x, this.sky.y);
             ctx.drawImage(assetLoader.imgs.sky, this.sky.x + canvas.width, this.sky.y);
 
@@ -189,7 +188,7 @@
             ctx.drawImage(assetLoader.imgs.backdrop2, this.backdrop2.x, this.backdrop2.y);
             ctx.drawImage(assetLoader.imgs.backdrop2, this.backdrop2.x + canvas.width, this.backdrop2.y);
 
-            // If the image scrolled off the screen, reset
+            // Si l'image sort de l'écran, réinitialiser
             if (this.sky.x + assetLoader.imgs.sky.width <= 0)
                 this.sky.x = 0;
             if (this.backdrop.x + assetLoader.imgs.backdrop.width <= 0)
@@ -332,7 +331,7 @@
             volume = 1;
         }
 
-        for (var sounsd in assetLoader.sounds) {
+        for (var sound in assetLoader.sounds) {
             assetLoader.sounds[sound].volume = volume;
         }
     });

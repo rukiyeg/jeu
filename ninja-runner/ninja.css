@@ -19,6 +19,7 @@ canvas {
 a {
     text-decoration: none;
     color: inherit;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
 .conteneur {
@@ -99,8 +100,6 @@ a {
 
 #main {
     display: none;
-    width: 50%;
-    height: 60%;
     overflow: auto;
     margin: auto;
     position: absolute;
@@ -117,11 +116,32 @@ a {
 
 .play {
     display: block;
-    width: 150px;
+    width: 200px;
     margin: 0 auto;
-    height: 30px;
+    height: 67px;
     line-height: 30px;
     border: 1px solid #AA2666;
     border-radius: 5px;
     box-sizing: border-box;
+    background-color: #FB1886;
+    color: white;
+    font-weight: 900;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+
+}
+
+.play:hover {
+    display: block;
+    width: 200px;
+    margin: 0 auto;
+    height: 67px;
+    line-height: 30px;
+    border: 1px solid #AA2666;
+    border-radius: 5px;
+    box-sizing: border-box;
+    background-color: #B30D5D;
+    color: white;
+    font-weight: 900;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+
 }
