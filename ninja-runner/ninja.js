@@ -66,10 +66,13 @@
         var assetsLoaded = 0; //nb d'objets chargé
         var nbImgs = Object.keys(this.imgs).length; //nb d'images chargé
         var nbSounds = Object.keys(this.sounds).length; //nb de sons chargé
-        this.totalAsset = nbImgs + nbSounds;
+        this.totalAsset = nbImgs + nbSounds; //total
         this.checkAudio = {}; //????
 
-
+        /**
+         * Vérifie que tous les objets sont chargé avant de les utiliser
+         * @param self Fait reference à l'objet assetloadert
+         */
         function assetLoaded(self, folder, name) {
             assetsLoaded++;
             self[folder][name].status = 'loaded';
@@ -92,6 +95,7 @@
         }
 
 
+        // 
         var self = this;
         var src = '';
         for (var img in this.imgs) {
@@ -131,15 +135,21 @@
     })();
 
     /**
-     * Creates a Spritesheet
-     * @param {string} - Path to the image.
-     * @param {number} - Width (in px) of each frame.
-     * @param {number} - Height (in px) of each frame.
+     * crée un Spritesheet
+     * @param {string} - chemin de l'image.
+     * @param {number} - Largeur (en px) de chaque frame.
+     * @param {number} - Hauteur (en px) de chaque frame.
      */
     function SpriteSheet(path, frameWidth, frameHeight) {
         this.image = new Image();
         this.frameWidth = frameWidth;
         this.frameHeight = frameHeight;
+        
+        var self = this;
+        this.image.onload = function(){
+            self.framesPerRow = Math.floor(self.image.width / self.frameWidth);
+        };
+        this.image.src = path;
 
     }
 
